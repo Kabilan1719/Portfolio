@@ -9,7 +9,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 const basename =
   window.location.hostname === "localhost"
     ? "/"
-    : "/React-shopping-website";
+    : "/Portfolio";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
