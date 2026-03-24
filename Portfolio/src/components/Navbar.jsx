@@ -2,7 +2,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 function Navbar() {
   const navigate = useNavigate();
-  const location = useLocation(); // 🔥 get current path
+  const location = useLocation();
 
   return (
     <nav className="navbar bg-light py-3 px-4 d-flex justify-content-between">
@@ -19,8 +19,8 @@ function Navbar() {
         <button
           onClick={() => navigate("/")}
           className={`btn rounded-pill px-4 ${
-            location.pathname === "/" 
-              ? "btn-dark disabled" 
+            location.pathname === "/" || location.pathname.includes("Portfolio/")
+              ? "btn-dark disabled"
               : "btn-outline-dark"
           }`}
         >
@@ -31,8 +31,8 @@ function Navbar() {
         <button
           onClick={() => navigate("/Projects")}
           className={`btn rounded-pill px-4 ${
-            location.pathname === "/Projects" 
-              ? "btn-dark disabled" 
+            location.pathname.includes("/Projects")
+              ? "btn-dark disabled"
               : "btn-outline-dark"
           }`}
         >
@@ -43,8 +43,8 @@ function Navbar() {
         <button
           onClick={() => navigate("/AboutPage")}
           className={`btn rounded-pill px-4 ${
-            location.pathname === "/AboutPage" 
-              ? "btn-dark disabled" 
+            location.pathname.includes("/AboutPage")
+              ? "btn-dark disabled"
               : "btn-outline-dark"
           }`}
         >
@@ -55,8 +55,8 @@ function Navbar() {
         <button
           onClick={() => navigate("/Contact")}
           className={`btn rounded-pill px-4 ${
-            location.pathname === "/Contact" 
-              ? "btn-dark disabled" 
+            location.pathname.includes("/Contact")
+              ? "btn-dark disabled"
               : "btn-outline-dark"
           }`}
         >

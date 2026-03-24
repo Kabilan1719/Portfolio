@@ -8,7 +8,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const basename =
   window.location.hostname === "localhost"
-    ? "/"
+    ? ""
     : "/Portfolio";
 
 createRoot(document.getElementById('root')).render(
